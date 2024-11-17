@@ -1,10 +1,12 @@
 package entity;
 
+import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.util.HashSet;
 import java.util.Set;
 
 public class Program {
+    @Id
     private long id;
     private String name;
     private int credit;
