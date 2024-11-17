@@ -35,4 +35,12 @@ public class Book {
     public void setTitle(String title) {
         this.title = title;
     }
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
+    }
 }

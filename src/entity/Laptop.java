@@ -37,4 +37,12 @@ public class Laptop {
     public void setBrand(String brand) {
         this.brand = brand;
     }
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
+    }
 }

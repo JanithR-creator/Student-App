@@ -1,17 +1,19 @@
 package entity;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToMany;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity
 public class Program {
     @Id
     private long id;
     private String name;
     private int credit;
 
-    @OneToMany(mappedBy = "programs")
+    @ManyToMany(mappedBy = "programs")
     private Set<Student> students = new HashSet<>();
 
     public Program() {
@@ -45,5 +47,13 @@ public class Program {
 
     public void setCredit(int credit) {
         this.credit = credit;
+    }
+
+    public Set<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(Set<Student> students) {
+        this.students = students;
     }
 }
