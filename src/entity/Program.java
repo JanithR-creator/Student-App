@@ -1,9 +1,16 @@
 package entity;
 
+import javax.persistence.OneToMany;
+import java.util.HashSet;
+import java.util.Set;
+
 public class Program {
     private long id;
     private String name;
     private int credit;
+
+    @OneToMany(mappedBy = "programs")
+    private Set<Student> students = new HashSet<>();
 
     public Program() {
     }

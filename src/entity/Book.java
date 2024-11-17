@@ -1,11 +1,14 @@
 package entity;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Book {
     private long id;
     private String title;
+    @ManyToOne
+    private Student student;
 
     public Book() {
     }

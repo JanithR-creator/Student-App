@@ -1,11 +1,16 @@
 package entity;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Laptop {
     private long code;
     private String brand;
+    @OneToOne
+    @JoinColumn(unique = true)
+    private Student student;
 
     public Laptop() {
     }
